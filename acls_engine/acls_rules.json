@@ -1,0 +1,84 @@
+{
+  "rules": [
+    {
+      "rule_id": "R_BLS_001",
+      "layer": "BLS",
+      "from_state": "arrest_recognized",
+      "to_state": "cpr_initiated",
+      "expected_within_sec": 30,
+      "severity": "critical",
+      "guideline_reference": "AHA 2025 BLS Algorithm",
+      "deviation_message": "CPR not initiated within 30 seconds of arrest recognition"
+    },
+    {
+      "rule_id": "R_BLS_002",
+      "layer": "BLS",
+      "from_state": "arrest_recognized",
+      "to_state": "defibrillator_attached",
+      "expected_within_sec": 60,
+      "severity": "high",
+      "guideline_reference": "AHA 2025 BLS Algorithm",
+      "deviation_message": "Defibrillator not attached within 60 seconds of arrest recognition"
+    },
+    {
+      "rule_id": "R_BLS_003",
+      "layer": "BLS",
+      "from_state": "arrest_recognized",
+      "to_state": "pulse_check_initiated",
+      "expected_within_sec": 10,
+      "severity": "high",
+      "guideline_reference": "AHA 2025 BLS Algorithm",
+      "deviation_message": "Pulse check not initiated within 10 seconds of arrest recognition"
+    },
+    {
+      "rule_id": "R_ACLS_001",
+      "layer": "ACLS",
+      "from_state": "vf_detected",
+      "to_state": "shock_delivered",
+      "expected_within_sec": 30,
+      "severity": "critical",
+      "guideline_reference": "AHA 2025 ACLS VF/pVT Algorithm",
+      "deviation_message": "Shock not delivered within 30 seconds of VF detection"
+    },
+    {
+      "rule_id": "R_ACLS_002",
+      "layer": "ACLS",
+      "from_state": "shock_delivered",
+      "to_state": "cpr_resumed",
+      "expected_within_sec": 10,
+      "severity": "critical",
+      "guideline_reference": "AHA 2025 ACLS Algorithm",
+      "deviation_message": "CPR not resumed within 10 seconds after shock delivery"
+    },
+    {
+      "rule_id": "R_ACLS_003",
+      "layer": "ACLS",
+      "from_state": "cpr_initiated",
+      "to_state": "epinephrine_given",
+      "expected_within_sec": 300,
+      "severity": "high",
+      "guideline_reference": "AHA 2025 ACLS Algorithm",
+      "deviation_message": "Epinephrine not given within 5 minutes of CPR initiation"
+    },
+    {
+      "rule_id": "R_ACLS_004",
+      "layer": "ACLS",
+      "from_state": "vf_detected",
+      "to_state": "reversible_causes_discussed",
+      "expected_within_sec": 600,
+      "severity": "moderate",
+      "guideline_reference": "AHA 2025 ACLS Algorithm - Hs and Ts",
+      "deviation_message": "Reversible causes not discussed within 10 minutes of arrest"
+    },
+    {
+      "rule_id": "R_ACLS_005",
+      "layer": "ACLS",
+      "from_state": "third_shock_delivered",
+      "to_state": "amiodarone_given",
+      "expected_within_sec": 120,
+      "severity": "high",
+      "guideline_reference": "AHA 2025 ACLS Algorithm - Amiodarone after 3rd shock",
+      "deviation_message": "Amiodarone not given after third shock within 2 minutes"
+    }
+  ]
+}

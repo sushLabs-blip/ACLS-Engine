@@ -1,0 +1,31 @@
+{
+  "session_id": "BRADY_INFRANODAL_ATROPINE_HARM_001",
+  "session_date": "2026-05-28",
+  "scenario_type": "INFRANODAL_BLOCK_ATROPINE_GIVEN_NO_TCP",
+  "team_roles": ["team_leader", "nurse", "resident", "recorder"],
+  "events": [
+    { "event_id": "evt_001", "timestamp_sec": 0,   "event_type": "bradycardia_recognized",    "actor_role": "team_leader", "source": "audio",  "confidence": 0.95 },
+    { "event_id": "evt_002", "timestamp_sec": 8,   "event_type": "vitals_recorded",           "actor_role": "nurse",       "source": "monitor","confidence": 0.98,
+      "data": { "heart_rate_bpm": 32, "rhythm_label": "mobitz_type_ii" } },
+    { "event_id": "evt_003", "timestamp_sec": 14,  "event_type": "iv_access_established",     "actor_role": "nurse",       "source": "video",  "confidence": 0.93 },
+    { "event_id": "evt_004", "timestamp_sec": 22,  "event_type": "twelve_lead_obtained",      "actor_role": "resident",    "source": "video",  "confidence": 0.91 },
+    { "event_id": "evt_005", "timestamp_sec": 32,  "event_type": "av_block_type_identified",  "actor_role": "resident",    "source": "audio",  "confidence": 0.92,
+      "_comment": "Mobitz Type II — infranodal block confirmed",
+      "data": { "av_block_type": "mobitz_type_ii_second_degree_av_block" } },
+    { "event_id": "evt_006", "timestamp_sec": 42,  "event_type": "compromise_assessed",       "actor_role": "team_leader", "source": "audio",  "confidence": 0.92,
+      "data": { "compromise_signs": { "hypotension": true, "altered_mental_status": false, "signs_of_shock": true, "ischemic_chest_discomfort": false, "acute_heart_failure": false } } },
+    { "event_id": "evt_007", "timestamp_sec": 55,  "event_type": "atropine_given",            "actor_role": "nurse",       "source": "audio",  "confidence": 0.95,
+      "_comment": "DEVIATION R_BRADY_001 — atropine for confirmed infranodal block (HIGH)",
+      "data": { "dose_mg": 1.0, "route": "IV_bolus" } },
+    { "event_id": "evt_008", "timestamp_sec": 120, "event_type": "sedation_given",            "actor_role": "nurse",       "source": "audio",  "confidence": 0.92 },
+    { "event_id": "evt_009", "timestamp_sec": 128, "event_type": "analgesia_given",           "actor_role": "nurse",       "source": "audio",  "confidence": 0.92 },
+    { "event_id": "evt_010", "timestamp_sec": 135, "event_type": "tcp_initiated",             "actor_role": "resident",    "source": "audio",  "confidence": 0.90,
+      "data": { "rate_bpm": 70, "output_mA": 40 } },
+    { "event_id": "evt_011", "timestamp_sec": 150, "event_type": "electrical_capture_confirmed","actor_role": "resident",   "source": "monitor","confidence": 0.94,
+      "data": { "capture_mA": 55 } },
+    { "event_id": "evt_012", "timestamp_sec": 162, "event_type": "mechanical_capture_confirmed","actor_role": "nurse",      "source": "audio",  "confidence": 0.93 },
+    { "event_id": "evt_013", "timestamp_sec": 200, "event_type": "expert_consulted",          "actor_role": "team_leader", "source": "audio",  "confidence": 0.90 },
+    { "event_id": "evt_014", "timestamp_sec": 300, "event_type": "patient_stabilized",        "actor_role": "team_leader", "source": "audio",  "confidence": 0.95 },
+    { "event_id": "evt_015", "timestamp_sec": 360, "event_type": "session_end",               "actor_role": "system",      "source": "system", "confidence": 1.0  }
+  ]
+}
