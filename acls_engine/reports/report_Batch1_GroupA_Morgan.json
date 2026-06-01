@@ -1,0 +1,93 @@
+{
+  "report_for": "Morgan",
+  "batch_id": "Batch1_GroupA",
+  "generated_at": "2026-06-01T10:42:07.544127",
+  "overall_summary": {
+    "total_sessions": 3,
+    "roles_completed": [
+      "airway",
+      "compressor",
+      "defibrillator_operator"
+    ],
+    "roles_pending": [
+      "iv_member",
+      "recorder",
+      "team_leader"
+    ],
+    "average_score": 50.0,
+    "best_score": 100.0,
+    "worst_score": 0.0,
+    "score_trend": "improving",
+    "weakest_role": "compressor",
+    "total_deviations_attributed": 0,
+    "top_recurring_deviations": []
+  },
+  "performance_by_role": [
+    {
+      "role": "airway",
+      "sessions_as_role": 1,
+      "average_score": null,
+      "best_score": null,
+      "worst_score": null,
+      "total_deviations": 0,
+      "recurring_deviations": [],
+      "sessions": [
+        {
+          "session_id": "ARREST_ASYSTOLE_CPR_DELAY_001",
+          "session_date": "2026-05-28",
+          "scenario_type": "ASYSTOLE_ARREST_CPR_DELAY_AND_LATE_EPI",
+          "algorithm": "cardiac_arrest",
+          "role_active": false,
+          "team_score": 0.0,
+          "individual_score": null,
+          "deviation_count": 0,
+          "deviations": []
+        }
+      ]
+    },
+    {
+      "role": "compressor",
+      "sessions_as_role": 1,
+      "average_score": 0.0,
+      "best_score": 0.0,
+      "worst_score": 0.0,
+      "total_deviations": 0,
+      "recurring_deviations": [],
+      "sessions": [
+        {
+          "session_id": "ARREST_PEA_INAPPROPRIATE_SHOCK_002",
+          "session_date": "2026-05-28",
+          "scenario_type": "PEA_ARREST_INAPPROPRIATE_SHOCK_AND_DELAYED_EPI",
+          "algorithm": "cardiac_arrest",
+          "role_active": true,
+          "team_score": 0.0,
+          "individual_score": 0.0,
+          "deviation_count": 0,
+          "deviations": []
+        }
+      ]
+    },
+    {
+      "role": "defibrillator_operator",
+      "sessions_as_role": 1,
+      "average_score": 100.0,
+      "best_score": 100.0,
+      "worst_score": 100.0,
+      "total_deviations": 0,
+      "recurring_deviations": [],
+      "sessions": [
+        {
+          "session_id": "MEGA_CASE1_SINUS_BRADY_TO_VF_ASYSTOLE_001",
+          "session_date": "2026-06-01",
+          "scenario_type": "MEGACODE_CASE1_BRADY_TO_VF_TO_ASYSTOLE_TO_ROSC",
+          "algorithm": "bradycardia_with_pulse",
+          "role_active": true,
+          "team_score": 100.0,
+          "individual_score": 100.0,
+          "deviation_count": 0,
+          "deviations": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "batch_id": "Batch1_GroupB",
+  "session_id": "ARREST_VF_DELAYED_SHOCK_001",
+  "session_date": "2026-05-28",
+  "scenario_type": "VF_ARREST_DELAYED_DEFIBRILLATION",
+
+  "scenario_version": "1.0",
+  "algorithm": "ACLS_2025",
+  "difficulty": "intermediate",
+  "expected_outcome": "immediate_defibrillation_for_shockable_rhythm",
+  "debriefing_enabled": true,
+
+  "participants": {
+    "team_leader": "Arun Kumar",
+    "compressor": "Priya",
+    "iv_member": "Karthik",
+    "airway": "Divya Krishnan",
+    "recorder": "Vignesh",
+    "defibrillator_operator": "Anitha Raj"
+  },
+
+  "team_roles": [
+    "team_leader",
+    "compressor",
+    "iv_member",
+    "airway",
+    "recorder",
+    "defibrillator_operator"
+  ],
+
+  "events": [
+    {
+      "event_id": "evt_001",
+      "timestamp_sec": 0,
+      "event_type": "arrest_recognized",
+      "actor_role": "team_leader",
+      "source": "audio",
+      "confidence": 0.95
+    },
+
+    {
+      "event_id": "evt_002",
+      "timestamp_sec": 8,
+      "event_type": "cpr_initiated",
+      "actor_role": "compressor",
+      "source": "video",
+      "confidence": 0.95,
+      "data": {
+        "compression_rate_cpm": 108,
+        "compression_depth_mm": 54,
+        "recoil_quality": "complete",
+        "compression_fraction": 0.92,
+        "pause_duration_sec": 0,
+        "ventilation_rate_per_min": 10,
+        "etco2_mmHg": 18,
+        "chest_compression_quality": "good"
+      }
+    },
+
+    {
+      "event_id": "evt_003",
+      "timestamp_sec": 20,
+      "event_type": "vf_detected",
+      "actor_role": "defibrillator_operator",
+      "source": "monitor",
+      "confidence": 0.97
+    },
+
+    {
+      "event_id": "evt_004",
+      "timestamp_sec": 60,
+      "event_type": "shock_delivered",
+      "actor_role": "defibrillator_operator",
+      "source": "audio",
+      "confidence": 0.95,
+      "_comment": "DEVIATION R_ARREST_VF_001 — first shock delayed 40s after VF recognition",
+      "data": {
+        "shock_number": 1,
+        "energy_J": 200
+      }
+    },
+
+    {
+      "event_id": "evt_005",
+      "timestamp_sec": 68,
+      "event_type": "cpr_resumed",
+      "actor_role": "compressor",
+      "source": "video",
+      "confidence": 0.93,
+      "data": {
+        "compression_rate_cpm": 112,
+        "compression_depth_mm": 53,
+        "recoil_quality": "complete",
+        "compression_fraction": 0.90,
+        "pause_duration_sec": 8,
+        "ventilation_rate_per_min": 10,
+        "etco2_mmHg": 20,
+        "chest_compression_quality": "good"
+      }
+    },
+
+    {
+      "event_id": "evt_006",
+      "timestamp_sec": 120,
+      "event_type": "rhythm_check",
+      "actor_role": "defibrillator_operator",
+      "source": "audio",
+      "confidence": 0.90
+    },
+
+    {
+      "event_id": "evt_007",
+      "timestamp_sec": 130,
+      "event_type": "vf_detected",
+      "actor_role": "defibrillator_operator",
+      "source": "monitor",
+      "confidence": 0.97
+    },
+
+    {
+      "event_id": "evt_008",
+      "timestamp_sec": 145,
+      "event_type": "shock_delivered",
+      "actor_role": "defibrillator_operator",
+      "source": "audio",
+      "confidence": 0.95,
+      "data": {
+        "shock_number": 2,
+        "energy_J": 200
+      }
+    },
+
+    {
+      "event_id": "evt_009",
+      "timestamp_sec": 152,
+      "event_type": "cpr_resumed",
+      "actor_role": "compressor",
+      "source": "video",
+      "confidence": 0.93,
+      "data": {
+        "compression_rate_cpm": 110,
+        "compression_depth_mm": 55,
+        "recoil_quality": "complete",
+        "compression_fraction": 0.91,
+        "pause_duration_sec": 7,
+        "ventilation_rate_per_min": 10,
+        "etco2_mmHg": 22,
+        "chest_compression_quality": "good"
+      }
+    },
+
+    {
+      "event_id": "evt_010",
+      "timestamp_sec": 210,
+      "event_type": "epinephrine_given",
+      "actor_role": "iv_member",
+      "source": "audio",
+      "confidence": 0.92
+    },
+
+    {
+      "event_id": "evt_011",
+      "timestamp_sec": 240,
+      "event_type": "rhythm_check",
+      "actor_role": "defibrillator_operator",
+      "source": "audio",
+      "confidence": 0.90
+    },
+
+    {
+      "event_id": "evt_012",
+      "timestamp_sec": 250,
+      "event_type": "vf_detected",
+      "actor_role": "defibrillator_operator",
+      "source": "monitor",
+      "confidence": 0.97
+    },
+
+    {
+      "event_id": "evt_013",
+      "timestamp_sec": 262,
+      "event_type": "shock_delivered",
+      "actor_role": "defibrillator_operator",
+      "source": "audio",
+      "confidence": 0.95,
+      "data": {
+        "shock_number": 3,
+        "energy_J": 200
+      }
+    },
+
+    {
+      "event_id": "evt_014",
+      "timestamp_sec": 270,
+      "event_type": "cpr_resumed",
+      "actor_role": "compressor",
+      "source": "video",
+      "confidence": 0.93,
+      "data": {
+        "compression_rate_cpm": 109,
+        "compression_depth_mm": 56,
+        "recoil_quality": "complete",
+        "compression_fraction": 0.93,
+        "pause_duration_sec": 8,
+        "ventilation_rate_per_min": 10,
+        "etco2_mmHg": 25,
+        "chest_compression_quality": "good"
+      }
+    },
+
+    {
+      "event_id": "evt_015",
+      "timestamp_sec": 420,
+      "event_type": "epinephrine_given",
+      "actor_role": "iv_member",
+      "source": "audio",
+      "confidence": 0.92
+    },
+
+    {
+      "event_id": "evt_016",
+      "timestamp_sec": 480,
+      "event_type": "reversible_causes_discussed",
+      "actor_role": "team_leader",
+      "source": "audio",
+      "confidence": 0.88
+    },
+
+    {
+      "event_id": "evt_017",
+      "timestamp_sec": 540,
+      "event_type": "rosc_achieved",
+      "actor_role": "team_leader",
+      "source": "audio",
+      "confidence": 0.97
+    },
+
+    {
+      "event_id": "evt_018",
+      "timestamp_sec": 560,
+      "event_type": "session_end",
+      "actor_role": "system",
+      "source": "system",
+      "confidence": 1.0
+    }
+  ]
+}

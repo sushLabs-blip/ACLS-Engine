@@ -1,0 +1,225 @@
+{
+  "session_id": "ACLS_CORRECT_PVT_TO_PEA_ROSC_001",
+  "session_date": "2026-05-27",
+  "scenario_type": "PVT_TO_PEA_CARDIAC_ARREST",
+  "team_roles": ["team_leader", "compressor", "defibrillator_cpr_coach", "iv_member", "airway", "recorder"],
+  "role_assignments": {
+    "team_leader": "TBD",
+    "compressor": "TBD",
+    "defibrillator_cpr_coach": "TBD",
+    "iv_member": "TBD",
+    "airway": "TBD",
+    "recorder": "TBD"
+  },
+  "events": [
+    {
+      "event_id": "evt_001",
+      "timestamp_sec": 0,
+      "event_type": "arrest_recognized",
+      "actor_role": "airway",
+      "source": "audio",
+      "confidence": 0.95
+    },
+    {
+      "event_id": "evt_002",
+      "timestamp_sec": 10,
+      "event_type": "cpr_initiated",
+      "actor_role": "team_leader",
+      "source": "audio",
+      "confidence": 0.95
+    },
+    
+    {
+    "event_id": "evt_002b",
+    "timestamp_sec": 8,
+    "event_type": "basic_airway_opened",
+    "actor_role": "airway",
+    "source": "video",
+    "confidence": 0.93
+    },
+    {
+    "event_id": "evt_002c",
+    "timestamp_sec": 12,
+    "event_type": "bag_mask_ventilation_started",
+    "actor_role": "airway",
+    "source": "video",
+    "confidence": 0.92
+    },
+    {
+    "event_id": "evt_002d",
+    "timestamp_sec": 45,
+    "event_type": "iv_access_established",
+    "actor_role": "iv_member",
+    "source": "audio",
+    "confidence": 0.91
+    },
+    {
+      "event_id": "evt_003",
+      "timestamp_sec": 35,
+      "event_type": "defibrillator_attached",
+      "actor_role": "defibrillator_cpr_coach",
+      "source": "video",
+      "confidence": 0.93
+    },
+    {
+      "event_id": "evt_004",
+      "timestamp_sec": 48,
+      "event_type": "pvt_detected",
+      "actor_role": "defibrillator_cpr_coach",
+      "source": "audio",
+      "confidence": 0.92
+    },
+    {
+      "event_id": "evt_005",
+      "timestamp_sec": 82,
+      "event_type": "shock_delivered",
+      "actor_role": "defibrillator_cpr_coach",
+      "source": "audio",
+      "confidence": 0.95
+    },
+    {
+      "event_id": "evt_006",
+      "timestamp_sec": 85,
+      "event_type": "cpr_resumed",
+      "actor_role": "compressor",
+      "source": "video",
+      "confidence": 0.94
+    },
+    {
+      "event_id": "evt_007",
+      "timestamp_sec": 138,
+      "event_type": "epinephrine_given",
+      "actor_role": "iv_member",
+      "source": "audio",
+      "confidence": 0.92
+    },
+    {
+      "event_id": "evt_008",
+      "timestamp_sec": 205,
+      "event_type": "shock_delivered",
+      "actor_role": "defibrillator_cpr_coach",
+      "source": "audio",
+      "confidence": 0.95
+    },
+    {
+      "event_id": "evt_009",
+      "timestamp_sec": 208,
+      "event_type": "cpr_resumed",
+      "actor_role": "compressor",
+      "source": "video",
+      "confidence": 0.94
+    },
+    {
+      "event_id": "evt_010",
+      "timestamp_sec": 265,
+      "event_type": "amiodarone_given",
+      "actor_role": "iv_member",
+      "source": "audio",
+      "confidence": 0.91
+    },
+    {
+      "event_id": "evt_011",
+      "timestamp_sec": 330,
+      "event_type": "shock_delivered",
+      "actor_role": "defibrillator_cpr_coach",
+      "source": "audio",
+      "confidence": 0.95
+    },
+    {
+      "event_id": "evt_012",
+      "timestamp_sec": 334,
+      "event_type": "cpr_resumed",
+      "actor_role": "compressor",
+      "source": "video",
+      "confidence": 0.94
+    },
+    {
+      "event_id": "evt_013",
+      "timestamp_sec": 372,
+      "event_type": "epinephrine_given",
+      "actor_role": "iv_member",
+      "source": "audio",
+      "confidence": 0.92
+    },
+    {
+      "event_id": "evt_014",
+      "timestamp_sec": 445,
+      "event_type": "shock_delivered",
+      "actor_role": "defibrillator_cpr_coach",
+      "source": "audio",
+      "confidence": 0.95
+    },
+    {
+      "event_id": "evt_015",
+      "timestamp_sec": 448,
+      "event_type": "cpr_resumed",
+      "actor_role": "compressor",
+      "source": "video",
+      "confidence": 0.94
+    },
+    {
+      "event_id": "evt_016",
+      "timestamp_sec": 485,
+      "event_type": "reversible_causes_discussed",
+      "actor_role": "team_leader",
+      "source": "audio",
+      "confidence": 0.88
+    },
+    {
+      "event_id": "evt_017",
+      "timestamp_sec": 564,
+      "event_type": "shock_delivered",
+      "actor_role": "defibrillator_cpr_coach",
+      "source": "audio",
+      "confidence": 0.95
+    },
+    {
+      "event_id": "evt_018",
+      "timestamp_sec": 568,
+      "event_type": "cpr_resumed",
+      "actor_role": "compressor",
+      "source": "video",
+      "confidence": 0.94
+    },
+    {
+      "event_id": "evt_019",
+      "timestamp_sec": 620,
+      "event_type": "advanced_airway_placed",
+      "actor_role": "airway",
+      "source": "video",
+      "confidence": 0.91
+    },
+    {
+      "event_id": "evt_020",
+      "timestamp_sec": 775,
+      "event_type": "rosc_achieved",
+      "actor_role": "team_leader",
+      "source": "audio",
+      "confidence": 0.97
+    },
+    {
+      "event_id": "evt_021",
+      "timestamp_sec": 790,
+      "event_type": "post_rosc_ecg_obtained",
+      "actor_role": "team_leader",
+      "source": "audio",
+      "confidence": 0.92
+    },
+    {
+      "event_id": "evt_022",
+      "timestamp_sec": 810,
+      "event_type": "temp_management_initiated",
+      "actor_role": "team_leader",
+      "source": "audio",
+      "confidence": 0.90
+    },
+    {
+      "event_id": "evt_023",
+      "timestamp_sec": 900,
+      "event_type": "session_end",
+      "actor_role": "system",
+      "source": "system",
+      "confidence": 1.0
+    }
+  ]
+}

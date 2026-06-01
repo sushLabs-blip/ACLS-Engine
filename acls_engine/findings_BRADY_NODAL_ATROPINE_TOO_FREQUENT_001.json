@@ -1,0 +1,69 @@
+{
+  "session_id": "BRADY_NODAL_ATROPINE_TOO_FREQUENT_001",
+  "session_date": "2026-05-28",
+  "scenario_type": "NODAL_BRADYCARDIA_ATROPINE_DOSING_ERROR",
+  "algorithm": "bradycardia_with_pulse",
+  "sub_type": null,
+  "final_state": "observe_and_treat_causes",
+  "performance_score": 80.0,
+  "total_deviations": 2,
+  "total_strengths": 4,
+  "strengths": [
+    {
+      "strength_id": "STR_001",
+      "description": "IV access established",
+      "domain": "access"
+    },
+    {
+      "strength_id": "STR_002",
+      "description": "12-lead ECG obtained",
+      "domain": "assessment"
+    },
+    {
+      "strength_id": "STR_003",
+      "description": "AV block correctly classified: first_degree_av_block",
+      "domain": "assessment"
+    },
+    {
+      "strength_id": "STR_005",
+      "description": "Expert consultation obtained",
+      "domain": "communication"
+    }
+  ],
+  "deviations": [
+    {
+      "finding_id": "fnd_0001",
+      "rule_id": "R_BRADY_004",
+      "algorithm": "bradycardia_with_pulse",
+      "status": "deviation",
+      "severity": "MEDIUM",
+      "penalty_weight": 0.1,
+      "confidence": 0.95,
+      "timestamp_sec": 108,
+      "from_event": "atropine_given",
+      "to_event": "atropine_given",
+      "actual_gap_sec": 60,
+      "expected_sec": 180,
+      "deviation_message": "Atropine repeat dose given 60s after previous dose \u2014 minimum interval is 180s (3 min)",
+      "guideline": "AHA 2025 Adult Bradycardia With a Pulse Algorithm",
+      "recommendation": "AHA 2025: Repeat atropine every 3\u20135 minutes as needed. Giving doses more frequently does not improve efficacy and increases adverse effects (tachycardia, anticholinergic toxicity)."
+    },
+    {
+      "finding_id": "fnd_0002",
+      "rule_id": "R_BRADY_004",
+      "algorithm": "bradycardia_with_pulse",
+      "status": "deviation",
+      "severity": "MEDIUM",
+      "penalty_weight": 0.1,
+      "confidence": 0.95,
+      "timestamp_sec": 168,
+      "from_event": "atropine_given",
+      "to_event": "atropine_given",
+      "actual_gap_sec": 60,
+      "expected_sec": 180,
+      "deviation_message": "Atropine repeat dose given 60s after previous dose \u2014 minimum interval is 180s (3 min)",
+      "guideline": "AHA 2025 Adult Bradycardia With a Pulse Algorithm",
+      "recommendation": "AHA 2025: Repeat atropine every 3\u20135 minutes as needed. Giving doses more frequently does not improve efficacy and increases adverse effects (tachycardia, anticholinergic toxicity)."
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+{
+  "batch_id": "Batch1_GroupA",
+  "session_id": "MEGA_CASE1_SINUS_BRADY_TO_VF_ASYSTOLE_001",
+  "session_date": "2026-06-01",
+  "scenario_type": "MEGACODE_CASE1_BRADY_TO_VF_TO_ASYSTOLE_TO_ROSC",
+  "megacode_case": "case_1",
+  "scenario_version": "1.0",
+  "algorithm": "megacode",
+  "difficulty": "advanced",
+  "debriefing_enabled": true,
+
+  "participants": {
+    "team_leader": "Alex",
+    "compressor": "Jordan",
+    "iv_member": "Taylor",
+    "airway": "Casey Bennett",
+    "recorder": "Riley Parker",
+    "defibrillator_operator": "Morgan"
+  },
+
+  "team_roles": [
+    "team_leader",
+    "compressor",
+    "iv_member",
+    "airway",
+    "recorder",
+    "defibrillator_operator"
+  ],
+
+  "phases": {
+    "phase_1": "bradycardia",
+    "phase_2": "vf_pvt_cardiac_arrest",
+    "phase_3": "asystole_cardiac_arrest",
+    "phase_4": "post_rosc_care"
+  },
+
+  "events": [
+
+    {
+      "event_id": "evt_001",
+      "timestamp_sec": 0,
+      "event_type": "bradycardia_recognized",
+      "actor_role": "team_leader",
+      "source": "audio",
+      "confidence": 0.95,
+      "_phase": "1"
+    },
+    {
+      "event_id": "evt_002",
+      "timestamp_sec": 10,
+      "event_type": "vitals_recorded",
+      "actor_role": "compressor",
+      "source": "monitor",
+      "confidence": 0.95,
+      "data": {
+        "heart_rate_bpm": 38,
+        "rhythm_label": "sinus_bradycardia",
+        "av_block_type": "sinus_bradycardia"
+      },
+      "_phase": "1"
+    },
+    {
+      "event_id": "evt_003",
+      "timestamp_sec": 15,
+      "event_type": "iv_access_established",
+      "actor_role": "iv_member",
+      "source": "video",
+      "confidence": 0.93,
+      "_phase": "1"
+    },
+    {
+      "event_id": "evt_004",
+      "timestamp_sec": 20,
+      "event_type": "twelve_lead_obtained",
+      "actor_role": "compressor",
+      "source": "video",
+      "confidence": 0.91,
+      "_phase": "1"
+    },
+    {
+      "event_id": "evt_005",
+      "timestamp_sec": 25,
+      "event_type": "compromise_assessed",
+      "actor_role": "team_leader",
+      "source": "audio",
+      "confidence": 0.92,
+      "data": {
+        "compromise_signs": {
+          "hypotension": true,
+          "altered_mental_status": false,
+          "signs_of_shock": true,
+          "ischemic_chest_discomfort": false,
+          "acute_heart_failure": false
+        }
+      },
+      "_phase": "1"
+    },
+    {
+      "event_id": "evt_006",
+      "timestamp_sec": 35,
+      "event_type": "atropine_given",
+      "actor_role": "iv_member",
+      "source": "audio",
+      "confidence": 0.92,
+      "data": { "dose_mg": 1.0 },
+      "_phase": "1"
+    },
+    {
+      "event_id": "evt_007",
+      "timestamp_sec": 45,
+      "event_type": "av_block_type_identified",
+      "actor_role": "defibrillator_operator",
+      "source": "audio",
+      "confidence": 0.90,
+      "data": { "av_block_type": "sinus_bradycardia" },
+      "_phase": "1"
+    },
+
+    {
+      "event_id": "evt_008",
+      "timestamp_sec": 90,
+      "event_type": "arrest_recognized",
+      "actor_role": "team_leader",
+      "source": "audio",
+      "confidence": 0.97,
+      "_phase": "2",
+      "_comment": "Patient deteriorates to cardiac arrest"
+    },
+    {
+      "event_id": "evt_009",
+      "timestamp_sec": 95,
+      "event_type": "cpr_initiated",
+      "actor_role": "compressor",
+      "source": "video",
+      "confidence": 0.95,
+      "_phase": "2"
+    },
+    {
+      "event_id": "evt_010",
+      "timestamp_sec": 100,
+      "event_type": "basic_airway_opened",
+      "actor_role": "airway",
+      "source": "video",
+      "confidence": 0.93,
+      "_phase": "2"
+    },
+    {
+      "event_id": "evt_011",
+      "timestamp_sec": 102,
+      "event_type": "bag_mask_ventilation_started",
+      "actor_role": "airway",
+      "source": "video",
+      "confidence": 0.92,
+      "_phase": "2"
+    },
+    {
+      "event_id": "evt_012",
+      "timestamp_sec": 110,
+      "event_type": "vf_detected",
+      "actor_role": "defibrillator_operator",
+      "source": "monitor",
+      "confidence": 0.97,
+      "_phase": "2"
+    },
+    {
+      "event_id": "evt_013",
+      "timestamp_sec": 140,
+      "event_type": "shock_delivered",
+      "actor_role": "defibrillator_operator",
+      "source": "audio",
+      "confidence": 0.95,
+      "_phase": "2"
+    },
+    {
+      "event_id": "evt_014",
+      "timestamp_sec": 145,
+      "event_type": "cpr_resumed",
+      "actor_role": "compressor",
+      "source": "video",
+      "confidence": 0.94,
+      "_phase": "2"
+    },
+    {
+      "event_id": "evt_015",
+      "timestamp_sec": 200,
+      "event_type": "epinephrine_given",
+      "actor_role": "iv_member",
+      "source": "audio",
+      "confidence": 0.92,
+      "_phase": "2"
+    },
+    {
+      "event_id": "evt_016",
+      "timestamp_sec": 265,
+      "event_type": "shock_delivered",
+      "actor_role": "defibrillator_operator",
+      "source": "audio",
+      "confidence": 0.95,
+      "_phase": "2"
+    },
+    {
+      "event_id": "evt_017",
+      "timestamp_sec": 268,
+      "event_type": "cpr_resumed",
+      "actor_role": "compressor",
+      "source": "video",
+      "confidence": 0.94,
+      "_phase": "2"
+    },
+    {
+      "event_id": "evt_018",
+      "timestamp_sec": 330,
+      "event_type": "amiodarone_given",
+      "actor_role": "iv_member",
+      "source": "audio",
+      "confidence": 0.91,
+      "_phase": "2"
+    },
+    {
+      "event_id": "evt_019",
+      "timestamp_sec": 395,
+      "event_type": "shock_delivered",
+      "actor_role": "defibrillator_operator",
+      "source": "audio",
+      "confidence": 0.95,
+      "_phase": "2"
+    },
+    {
+      "event_id": "evt_020",
+      "timestamp_sec": 398,
+      "event_type": "cpr_resumed",
+      "actor_role": "compressor",
+      "source": "video",
+      "confidence": 0.94,
+      "_phase": "2"
+    },
+
+    {
+      "event_id": "evt_021",
+      "timestamp_sec": 460,
+      "event_type": "asystole_detected",
+      "actor_role": "defibrillator_operator",
+      "source": "monitor",
+      "confidence": 0.96,
+      "_phase": "3",
+      "_comment": "Rhythm changes to asystole after 3rd shock"
+    },
+    {
+      "event_id": "evt_022",
+      "timestamp_sec": 480,
+      "event_type": "epinephrine_given",
+      "actor_role": "iv_member",
+      "source": "audio",
+      "confidence": 0.92,
+      "_phase": "3"
+    },
+    {
+      "event_id": "evt_023",
+      "timestamp_sec": 500,
+      "event_type": "reversible_causes_discussed",
+      "actor_role": "team_leader",
+      "source": "audio",
+      "confidence": 0.88,
+      "_phase": "3"
+    },
+    {
+      "event_id": "evt_024",
+      "timestamp_sec": 520,
+      "event_type": "advanced_airway_placed",
+      "actor_role": "airway",
+      "source": "video",
+      "confidence": 0.91,
+      "_phase": "3"
+    },
+    {
+      "event_id": "evt_025",
+      "timestamp_sec": 540,
+      "event_type": "iv_access_established",
+      "actor_role": "iv_member",
+      "source": "audio",
+      "confidence": 0.92,
+      "_phase": "3"
+    },
+
+    {
+      "event_id": "evt_026",
+      "timestamp_sec": 680,
+      "event_type": "rosc_achieved",
+      "actor_role": "team_leader",
+      "source": "audio",
+      "confidence": 0.97,
+      "_phase": "4"
+    },
+    {
+      "event_id": "evt_027",
+      "timestamp_sec": 695,
+      "event_type": "post_rosc_ecg_obtained",
+      "actor_role": "compressor",
+      "source": "video",
+      "confidence": 0.92,
+      "_phase": "4"
+    },
+    {
+      "event_id": "evt_028",
+      "timestamp_sec": 710,
+      "event_type": "temp_management_initiated",
+      "actor_role": "team_leader",
+      "source": "audio",
+      "confidence": 0.90,
+      "_phase": "4"
+    },
+    {
+      "event_id": "evt_029",
+      "timestamp_sec": 900,
+      "event_type": "session_end",
+      "actor_role": "system",
+      "source": "system",
+      "confidence": 1.0
+    }
+  ]
+}

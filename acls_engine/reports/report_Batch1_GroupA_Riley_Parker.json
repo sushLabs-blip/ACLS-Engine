@@ -1,0 +1,192 @@
+{
+  "report_for": "Riley Parker",
+  "batch_id": "Batch1_GroupA",
+  "generated_at": "2026-06-01T10:42:07.536290",
+  "overall_summary": {
+    "total_sessions": 3,
+    "roles_completed": [
+      "iv_member",
+      "team_leader",
+      "recorder"
+    ],
+    "roles_pending": [
+      "airway",
+      "compressor",
+      "defibrillator_operator"
+    ],
+    "average_score": 0.0,
+    "best_score": 0.0,
+    "worst_score": 0.0,
+    "score_trend": "stable",
+    "weakest_role": "iv_member",
+    "total_deviations_attributed": 8,
+    "top_recurring_deviations": [
+      {
+        "rule_id": "R_ARREST_009",
+        "count": 1
+      },
+      {
+        "rule_id": "R_ARREST_016",
+        "count": 1
+      },
+      {
+        "rule_id": "R_ARREST_017",
+        "count": 1
+      },
+      {
+        "rule_id": "R_ARREST_024",
+        "count": 1
+      },
+      {
+        "rule_id": "R_ARREST_025",
+        "count": 1
+      }
+    ]
+  },
+  "performance_by_role": [
+    {
+      "role": "iv_member",
+      "sessions_as_role": 1,
+      "average_score": 0.0,
+      "best_score": 0.0,
+      "worst_score": 0.0,
+      "total_deviations": 0,
+      "recurring_deviations": [],
+      "sessions": [
+        {
+          "session_id": "ARREST_ASYSTOLE_CPR_DELAY_001",
+          "session_date": "2026-05-28",
+          "scenario_type": "ASYSTOLE_ARREST_CPR_DELAY_AND_LATE_EPI",
+          "algorithm": "cardiac_arrest",
+          "role_active": true,
+          "team_score": 0.0,
+          "individual_score": 0.0,
+          "deviation_count": 0,
+          "deviations": []
+        }
+      ]
+    },
+    {
+      "role": "recorder",
+      "sessions_as_role": 1,
+      "average_score": null,
+      "best_score": null,
+      "worst_score": null,
+      "total_deviations": 0,
+      "recurring_deviations": [],
+      "sessions": [
+        {
+          "session_id": "MEGA_CASE1_SINUS_BRADY_TO_VF_ASYSTOLE_001",
+          "session_date": "2026-06-01",
+          "scenario_type": "MEGACODE_CASE1_BRADY_TO_VF_TO_ASYSTOLE_TO_ROSC",
+          "algorithm": "bradycardia_with_pulse",
+          "role_active": false,
+          "team_score": 100.0,
+          "individual_score": null,
+          "deviation_count": 0,
+          "deviations": []
+        }
+      ]
+    },
+    {
+      "role": "team_leader",
+      "sessions_as_role": 1,
+      "average_score": 0.0,
+      "best_score": 0.0,
+      "worst_score": 0.0,
+      "total_deviations": 8,
+      "recurring_deviations": [
+        {
+          "rule_id": "R_ARREST_009",
+          "count": 1
+        },
+        {
+          "rule_id": "R_ARREST_016",
+          "count": 1
+        },
+        {
+          "rule_id": "R_ARREST_017",
+          "count": 1
+        },
+        {
+          "rule_id": "R_ARREST_024",
+          "count": 1
+        },
+        {
+          "rule_id": "R_ARREST_025",
+          "count": 1
+        }
+      ],
+      "sessions": [
+        {
+          "session_id": "ARREST_PEA_INAPPROPRIATE_SHOCK_002",
+          "session_date": "2026-05-28",
+          "scenario_type": "PEA_ARREST_INAPPROPRIATE_SHOCK_AND_DELAYED_EPI",
+          "algorithm": "cardiac_arrest",
+          "role_active": true,
+          "team_score": 0.0,
+          "individual_score": 0.0,
+          "deviation_count": 8,
+          "deviations": [
+            {
+              "rule_id": "R_ARREST_009",
+              "severity": "HIGH",
+              "message": "First epinephrine delayed 208s in non-shockable rhythm \u2014 AHA 2025 recommends within 180s",
+              "guideline": "AHA 2025 ACLS \u2014 Non-Shockable Rhythm Epi Timing",
+              "recommendation": "For PEA/asystole: administer epinephrine 1mg IV/IO as soon as vascular access is established \u2014 target within 3 minutes of arrest."
+            },
+            {
+              "rule_id": "R_ARREST_016",
+              "severity": "HIGH",
+              "message": "12-lead ECG not documented after ROSC",
+              "guideline": "AHA 2025 Post Cardiac Arrest Care",
+              "recommendation": "Always obtain 12-lead ECG immediately after ROSC to screen for STEMI."
+            },
+            {
+              "rule_id": "R_ARREST_017",
+              "severity": "MEDIUM",
+              "message": "Temperature management not documented after ROSC",
+              "guideline": "AHA 2025 Post Cardiac Arrest Care",
+              "recommendation": "Initiate targeted temperature management for all unresponsive post arrest patients. Target 32-37.5C."
+            },
+            {
+              "rule_id": "R_ARREST_024",
+              "severity": "HIGH",
+              "message": "Basic airway management not documented",
+              "guideline": "AHA 2025 Primary ABCD Survey \u2014 Airway",
+              "recommendation": "Document airway opening technique used during resuscitation."
+            },
+            {
+              "rule_id": "R_ARREST_025",
+              "severity": "HIGH",
+              "message": "Bag mask ventilation not documented",
+              "guideline": "AHA 2025 Primary ABCD Survey \u2014 Breathing",
+              "recommendation": "Document ventilation method used. Bag mask ventilation should begin immediately after airway opened."
+            },
+            {
+              "rule_id": "R_ARREST_026",
+              "severity": "HIGH",
+              "message": "Defibrillator attachment not documented",
+              "guideline": "AHA 2025 Primary ABCD Survey \u2014 Defibrillation",
+              "recommendation": "Always document defibrillator attachment time for audit purposes."
+            },
+            {
+              "rule_id": "R_ARREST_027",
+              "severity": "MODERATE",
+              "message": "Advanced airway not placed during resuscitation",
+              "guideline": "AHA 2025 Secondary ABCD Survey \u2014 Airway",
+              "recommendation": "Consider advanced airway placement for prolonged resuscitation to enable continuous compressions."
+            },
+            {
+              "rule_id": "R_ARREST_028",
+              "severity": "HIGH",
+              "message": "IV or IO access not documented during resuscitation",
+              "guideline": "AHA 2025 Secondary ABCD Survey \u2014 Circulation",
+              "recommendation": "IV or IO access is required for drug administration. Document route used."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

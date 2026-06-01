@@ -1,0 +1,93 @@
+{
+  "session_id": "ARREST_VF_DELAYED_SHOCK_001",
+  "session_date": "2026-05-28",
+  "scenario_type": "VF_ARREST_DELAYED_DEFIBRILLATION",
+  "algorithm": "cardiac_arrest",
+  "sub_type": "VF",
+  "final_state": "rosc",
+  "performance_score": 15.0,
+  "total_deviations": 4,
+  "total_strengths": 2,
+  "strengths": [
+    {
+      "strength_id": "STR_001",
+      "description": "Defibrillation performed \u2014 3 shock(s) delivered",
+      "domain": "shock_delivery"
+    },
+    {
+      "strength_id": "STR_002",
+      "description": "Epinephrine administered 2 time(s)",
+      "domain": "drug_administration"
+    }
+  ],
+  "deviations": [
+    {
+      "finding_id": "fnd_0001",
+      "rule_id": "R_ARREST_002",
+      "algorithm": "cardiac_arrest",
+      "status": "deviation",
+      "severity": "CRITICAL",
+      "penalty_weight": 0.35,
+      "confidence": 0.95,
+      "timestamp_sec": 60,
+      "from_event": "vf_pvt_detected",
+      "to_event": "shock_delivered",
+      "actual_gap_sec": 40,
+      "expected_sec": 35,
+      "deviation_message": "Shock delayed 40s after VF/pVT detection (limit 35s)",
+      "guideline": "AHA 2025 ACLS VF/pVT Algorithm",
+      "recommendation": "Charge the defibrillator during ongoing CPR and deliver shock as soon as charged. Each minute of delay reduces survival 7-10%."
+    },
+    {
+      "finding_id": "fnd_0002",
+      "rule_id": "R_ARREST_011",
+      "algorithm": "cardiac_arrest",
+      "status": "deviation",
+      "severity": "HIGH",
+      "penalty_weight": 0.2,
+      "confidence": 0.95,
+      "timestamp_sec": 0,
+      "from_event": "third_shock_delivered",
+      "to_event": "antiarrhythmic_given",
+      "actual_gap_sec": null,
+      "expected_sec": null,
+      "deviation_message": "Neither amiodarone nor lidocaine given after 3 or more shocks in refractory shockable rhythm",
+      "guideline": "AHA 2025 ACLS Algorithm \u2014 Antiarrhythmic After 3rd Shock",
+      "recommendation": "For VF/pVT refractory to 3 or more shocks: administer amiodarone 300mg IV/IO (repeat 150mg once) OR lidocaine 1-1.5 mg/kg IV/IO as alternative."
+    },
+    {
+      "finding_id": "fnd_0003",
+      "rule_id": "R_ARREST_016",
+      "algorithm": "cardiac_arrest",
+      "status": "deviation",
+      "severity": "HIGH",
+      "penalty_weight": 0.2,
+      "confidence": 0.95,
+      "timestamp_sec": 0,
+      "from_event": "rosc_achieved",
+      "to_event": "post_rosc_ecg_obtained",
+      "actual_gap_sec": null,
+      "expected_sec": null,
+      "deviation_message": "12-lead ECG not documented after ROSC",
+      "guideline": "AHA 2025 Post Cardiac Arrest Care",
+      "recommendation": "Always obtain 12-lead ECG immediately after ROSC to screen for STEMI."
+    },
+    {
+      "finding_id": "fnd_0004",
+      "rule_id": "R_ARREST_017",
+      "algorithm": "cardiac_arrest",
+      "status": "deviation",
+      "severity": "MEDIUM",
+      "penalty_weight": 0.1,
+      "confidence": 0.95,
+      "timestamp_sec": 0,
+      "from_event": "rosc_achieved",
+      "to_event": "temp_management_initiated",
+      "actual_gap_sec": null,
+      "expected_sec": null,
+      "deviation_message": "Temperature management not documented after ROSC",
+      "guideline": "AHA 2025 Post Cardiac Arrest Care",
+      "recommendation": "Initiate targeted temperature management for all unresponsive post arrest patients. Target 32-37.5C."
+    }
+  ]
+}

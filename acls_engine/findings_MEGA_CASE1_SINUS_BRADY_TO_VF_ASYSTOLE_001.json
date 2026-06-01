@@ -1,0 +1,30 @@
+{
+  "session_id": "MEGA_CASE1_SINUS_BRADY_TO_VF_ASYSTOLE_001",
+  "session_date": "2026-06-01",
+  "scenario_type": "MEGACODE_CASE1_BRADY_TO_VF_TO_ASYSTOLE_TO_ROSC",
+  "algorithm": "bradycardia_with_pulse",
+  "sub_type": null,
+  "final_state": "classify_block_for_treatment",
+  "performance_score": 100.0,
+  "total_deviations": 0,
+  "total_strengths": 3,
+  "strengths": [
+    {
+      "strength_id": "STR_001",
+      "description": "IV access established",
+      "domain": "access"
+    },
+    {
+      "strength_id": "STR_002",
+      "description": "12-lead ECG obtained",
+      "domain": "assessment"
+    },
+    {
+      "strength_id": "STR_003",
+      "description": "AV block correctly classified: sinus_bradycardia",
+      "domain": "assessment"
+    }
+  ],
+  "deviations": [],
+  "phase_report": null
+}

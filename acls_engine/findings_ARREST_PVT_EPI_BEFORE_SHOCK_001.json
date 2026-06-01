@@ -1,0 +1,81 @@
+{
+  "session_id": "ARREST_PVT_EPI_BEFORE_SHOCK_001",
+  "session_date": "2026-05-28",
+  "scenario_type": "PVT_ARREST_EPI_BEFORE_DEFIBRILLATION",
+  "algorithm": "cardiac_arrest",
+  "sub_type": "pVT",
+  "final_state": "rosc",
+  "performance_score": 50.0,
+  "total_deviations": 3,
+  "total_strengths": 3,
+  "strengths": [
+    {
+      "strength_id": "STR_001",
+      "description": "Defibrillation performed \u2014 3 shock(s) delivered",
+      "domain": "shock_delivery"
+    },
+    {
+      "strength_id": "STR_002",
+      "description": "Epinephrine administered 2 time(s)",
+      "domain": "drug_administration"
+    },
+    {
+      "strength_id": "STR_003",
+      "description": "Amiodarone given for refractory shockable rhythm",
+      "domain": "drug_administration"
+    }
+  ],
+  "deviations": [
+    {
+      "finding_id": "fnd_0001",
+      "rule_id": "R_ARREST_008",
+      "algorithm": "cardiac_arrest",
+      "status": "deviation",
+      "severity": "HIGH",
+      "penalty_weight": 0.2,
+      "confidence": 0.95,
+      "timestamp_sec": 45,
+      "from_event": "vf_pvt_detected",
+      "to_event": "epinephrine_given",
+      "actual_gap_sec": null,
+      "expected_sec": null,
+      "deviation_message": "Epinephrine given before any defibrillation attempt in shockable rhythm (VF/pVT)",
+      "guideline": "AHA 2025 ACLS \u2014 Shockable Rhythm Epi Timing",
+      "recommendation": "In VF/pVT: prioritize early defibrillation. Administer epinephrine after the 2nd or 3rd shock while CPR is ongoing."
+    },
+    {
+      "finding_id": "fnd_0002",
+      "rule_id": "R_ARREST_016",
+      "algorithm": "cardiac_arrest",
+      "status": "deviation",
+      "severity": "HIGH",
+      "penalty_weight": 0.2,
+      "confidence": 0.95,
+      "timestamp_sec": 0,
+      "from_event": "rosc_achieved",
+      "to_event": "post_rosc_ecg_obtained",
+      "actual_gap_sec": null,
+      "expected_sec": null,
+      "deviation_message": "12-lead ECG not documented after ROSC",
+      "guideline": "AHA 2025 Post Cardiac Arrest Care",
+      "recommendation": "Always obtain 12-lead ECG immediately after ROSC to screen for STEMI."
+    },
+    {
+      "finding_id": "fnd_0003",
+      "rule_id": "R_ARREST_017",
+      "algorithm": "cardiac_arrest",
+      "status": "deviation",
+      "severity": "MEDIUM",
+      "penalty_weight": 0.1,
+      "confidence": 0.95,
+      "timestamp_sec": 0,
+      "from_event": "rosc_achieved",
+      "to_event": "temp_management_initiated",
+      "actual_gap_sec": null,
+      "expected_sec": null,
+      "deviation_message": "Temperature management not documented after ROSC",
+      "guideline": "AHA 2025 Post Cardiac Arrest Care",
+      "recommendation": "Initiate targeted temperature management for all unresponsive post arrest patients. Target 32-37.5C."
+    }
+  ]
+}

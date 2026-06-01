@@ -1,0 +1,29 @@
+{
+  "session_id": "ACLS_CORRECT_PVT_TO_PEA_ROSC_001",
+  "session_date": "2026-05-27",
+  "scenario_type": "PVT_TO_PEA_CARDIAC_ARREST",
+  "algorithm": "cardiac_arrest",
+  "sub_type": "pVT",
+  "final_state": "rosc",
+  "performance_score": 100.0,
+  "total_deviations": 0,
+  "total_strengths": 3,
+  "strengths": [
+    {
+      "strength_id": "STR_001",
+      "description": "Defibrillation performed \u2014 5 shock(s) delivered",
+      "domain": "shock_delivery"
+    },
+    {
+      "strength_id": "STR_002",
+      "description": "Epinephrine administered 2 time(s)",
+      "domain": "drug_administration"
+    },
+    {
+      "strength_id": "STR_003",
+      "description": "Amiodarone given for refractory shockable rhythm",
+      "domain": "drug_administration"
+    }
+  ],
+  "deviations": []
+}

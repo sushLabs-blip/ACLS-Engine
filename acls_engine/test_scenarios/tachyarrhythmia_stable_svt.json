@@ -1,0 +1,151 @@
+{
+  "batch_id": "Batch2_GroupA",
+  "session_id": "TACHY_STABLE_SVT_NO_VAGAL_WRONG_ADENOSINE_001",
+  "session_date": "2026-05-28",
+  "scenario_type": "STABLE_NARROW_REGULAR_SVT_PROTOCOL_ERRORS",
+
+  "scenario_version": "1.0",
+  "algorithm": "ACLS_2025",
+  "difficulty": "intermediate",
+  "debriefing_enabled": true,
+
+  "participants": {
+    "team_leader": "Priya",
+    "compressor": "Karthik",
+    "iv_member": "Divya Krishnan",
+    "airway": "Vignesh",
+    "recorder": "Anitha Raj",
+    "defibrillator_operator": "Arun Kumar"
+  },
+
+  "team_roles": [
+    "team_leader",
+    "compressor",
+    "iv_member",
+    "airway",
+    "recorder",
+    "defibrillator_operator"
+  ],
+
+  "events": [
+    {
+      "event_id": "evt_001",
+      "timestamp_sec": 0,
+      "event_type": "tachyarrhythmia_recognized",
+      "actor_role": "team_leader",
+      "source": "audio",
+      "confidence": 0.95
+    },
+
+    {
+      "event_id": "evt_002",
+      "timestamp_sec": 6,
+      "event_type": "vitals_recorded",
+      "actor_role": "iv_member",
+      "source": "monitor",
+      "confidence": 0.98,
+      "data": {
+        "heart_rate_bpm": 182,
+        "qrs_duration_sec": 0.08,
+        "rhythm_regularity": "regular",
+        "rhythm_label": "svt",
+        "qrs_morphology": "monomorphic"
+      }
+    },
+
+    {
+      "event_id": "evt_003",
+      "timestamp_sec": 14,
+      "event_type": "iv_access_established",
+      "actor_role": "iv_member",
+      "source": "video",
+      "confidence": 0.93
+    },
+
+    {
+      "event_id": "evt_004",
+      "timestamp_sec": 20,
+      "event_type": "twelve_lead_obtained",
+      "actor_role": "defibrillator_operator",
+      "source": "video",
+      "confidence": 0.91
+    },
+
+    {
+      "event_id": "evt_005",
+      "timestamp_sec": 28,
+      "event_type": "hemodynamic_stability_assessed",
+      "actor_role": "team_leader",
+      "source": "audio",
+      "confidence": 0.92,
+      "data": {
+        "instability_signs": {
+          "hypotension": false,
+          "altered_mental_status": false,
+          "signs_of_shock": false,
+          "ischemic_chest_discomfort": false,
+          "acute_heart_failure": false
+        }
+      }
+    },
+
+    {
+      "event_id": "evt_006",
+      "timestamp_sec": 30,
+      "event_type": "qrs_width_assessed",
+      "actor_role": "defibrillator_operator",
+      "source": "audio",
+      "confidence": 0.90,
+      "data": {
+        "qrs_wide": false
+      }
+    },
+
+    {
+      "event_id": "evt_007",
+      "timestamp_sec": 35,
+      "event_type": "adenosine_given",
+      "actor_role": "iv_member",
+      "source": "audio",
+      "confidence": 0.92,
+      "_comment": "DEVIATIONS: R_TACHY_011 (no vagal maneuver first), R_TACHY_002 (wrong route/no flush)",
+      "data": {
+        "dose_mg": 6,
+        "route": "slow_IV_push",
+        "flush_given": false
+      }
+    },
+
+    {
+      "event_id": "evt_008",
+      "timestamp_sec": 95,
+      "event_type": "adenosine_given",
+      "actor_role": "iv_member",
+      "source": "audio",
+      "confidence": 0.92,
+      "data": {
+        "dose_mg": 12,
+        "route": "rapid_IV_push",
+        "flush_given": true
+      }
+    },
+
+    {
+      "event_id": "evt_009",
+      "timestamp_sec": 130,
+      "event_type": "rhythm_converted",
+      "actor_role": "team_leader",
+      "source": "monitor",
+      "confidence": 0.96
+    },
+
+    {
+      "event_id": "evt_010",
+      "timestamp_sec": 160,
+      "event_type": "session_end",
+      "actor_role": "system",
+      "source": "system",
+      "confidence": 1.0
+    }
+  ]
+}
